@@ -44,7 +44,10 @@ sub Statement {
 			$thisamount += $each->GetDaysRented() * 3;
 		}
 		elsif ($pricecode == Movie::CHILDRENS) {
-			$thisamount += ($each->GetDaysRented() - 3) * 1.5;
+			$thisamount += 1.5;
+			if ($each->GetDaysRented() > 3) {
+				$thisamount += ($each->GetDaysRented() - 3) * 1.5;
+			}
 		}
 
 		# add frequent renter points
