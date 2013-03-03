@@ -62,8 +62,8 @@ sub Statement {
 		$totalamount += $thisamount;
 	}
 	# add footer lines
-	$result += "Amount owed is $totalamount\n";
-	$result += "You earned $frequentrenterpoints frequent renter points";
+	$result .= "Amount owed is $totalamount\n";
+	$result .= "You earned $frequentrenterpoints frequent renter points";
 	return $result
 }
 
